@@ -1,0 +1,37 @@
+RewriteEngine on
+RewriteRule ^signin views/sign_in.php
+RewriteRule ^signup views/sign_up.php
+RewriteRule ^logout views/logout.php
+RewriteRule ^dashboard views/dashboard.php
+RewriteRule ^applications views/applications/index.php
+RewriteRule ^application-edit/([0-9]+) views/applications/edit.php?id=$1
+RewriteRule ^create-new-application views/applications/create.php
+RewriteRule ^users /views/users/index.php
+RewriteRule ^create-new-user views/users/create.php
+RewriteRule ^user-edit/([0-9]+) views/users/edit.php?id=$1
+RewriteRule ^pending-applications views/application_pc/index.php?mode=1
+RewriteRule ^complete-applications views/application_pc/index.php?mode=2
+RewriteRule ^application-manage/([0-9]+) views/application_pc/edit.php?id=$1
+
+
+RewriteRule ^application/approve/(.*) views/application_pc/application_approve_reject.php?method=approve&uuid=$1
+RewriteRule ^application/reject/(.*) views/application_pc/application_approve_reject.php?method=reject&uuid=$1
+
+#Errors
+RewriteRule ^404 views/errors/404.php
+
+
+# API
+
+RewriteRule ^api/application-approve/(.*) api/change_application_status.php?method=approve&uuid=$1
+RewriteRule ^api/application-reject/(.*) api/change_application_status.php?method=reject&uuid=$1
+RewriteRule ^api/notification/getCount api/notification_controller.php?method=getCounts
+RewriteRule ^api/notification/getNotifications api/notification_controller.php?method=getNotifications
+RewriteRule ^api/notification/readNotification/([0-9]+) api/notification_controller.php?method=readNotification&id=$1
+
+# FOR CORS
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
