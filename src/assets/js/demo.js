@@ -854,7 +854,7 @@
     $('.body-notification').html(text);
 
 
-    if (notification_obj.notification_action != 0 || notification_obj.statusId != 0) {
+    if (notification_obj.notification_action != 0 || notification_obj.not_status != 0) {
       $('.modal-footer').css('display', 'none');
     }
     else {

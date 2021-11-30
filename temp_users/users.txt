@@ -1,0 +1,23 @@
+Managers
+====
+Username: Manager1
+Password: 1234
+E-Mail: manager_one@vacation-portal.com
+
+Username: Manager2
+password: qwe!@#
+E-Mail: manager_two@vacation-portal.com
+
+Employees
+====
+Username: Employee1
+Password: qweasdzxc
+E-Mail: employee_one@vacation-portal.com
+
+Username: Employee2
+Password: 123qwe
+E-Mail: employee_two@vacation-portal.com
+
+Username: Employee3
+Password: 098poi
+E-Mail: employee_three@vacation-portal.com

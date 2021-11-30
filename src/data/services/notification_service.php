@@ -35,8 +35,9 @@ class NotificationService {
 
         public function readNotification(int $notificationId):ResponseObject{
             global $notificationRepository;
-
-            if(!$notificationRepository->changeReadStatus($notificationId, NotificationReadStatus::Read)){
+            global $user;
+            
+            if(!$notificationRepository->changeReadStatus($notificationId, NotificationReadStatus::Read, $user->id)){
                 return new ResponseObject(1, "Something went wrong. Pleas try again.");
             }
 
@@ -45,8 +46,9 @@ class NotificationService {
 
         public function unreadNotification(int $notificationId) : ResponseObject{
             global $notificationRepository;
+            global $user;
 
-            if(!$notificationRepository->changeReadStatus($notificationId, NotificationReadStatus::Unread)){
+            if(!$notificationRepository->changeReadStatus($notificationId, NotificationReadStatus::Unread, $user->id)){
                 return new ResponseObject(1, "Something went wrong. Pleas try again.");
             }
 
