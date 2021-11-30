@@ -64,12 +64,12 @@ include_once APP_SITE . '/shared/login_header.php';
           <!-- /.col -->
         </div>
       </form>
-      <p class="mb-1">
+      <!-- <p class="mb-1">
         <a href="forgot-password.html">I forgot my password</a>
       </p>
       <p class="mb-0">
         <a href="/signup" class="text-center">Register as new employee</a>
-      </p>
+      </p> -->
     </div>
     <!-- /.card-body -->
   </div>

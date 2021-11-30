@@ -84,13 +84,13 @@ getHeader();
                             <div class="form-group">
                                 <input type="hidden" name="id" value="<?= $response->object->id ?>">
                                 <label for="date_from">Date From</label>
-                                <input type="text" name="date_from" id="date_from" class="form-control" value="<?= $response->object->date_from ?>">
+                                <input type="date" name="date_from" id="date_from" class="form-control" value="<?= $response->object->date_from ?>">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-12">
                             <div class="form-group">
                                 <label for="date_to">Date To</label>
-                                <input type="text" name="date_to" id="date_to" class="form-control" value="<?= $response->object->date_to ?>">
+                                <input type="date" name="date_to" id="date_to" class="form-control" value="<?= $response->object->date_to ?>">
                             </div>
                         </div>
                     </div>

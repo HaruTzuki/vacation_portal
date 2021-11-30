@@ -59,13 +59,13 @@ getHeader();
                         <div class="col-xl-6 col-lg-12">
                             <div class="form-group">
                                 <label for="date_from">Date From</label>
-                                <input type="text" name="date_from" id="date_from" class="form-control">
+                                <input type="date" name="date_from" id="date_from" class="form-control">
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-12">
                             <div class="form-group">
                                 <label for="date_to">Date To</label>
-                                <input type="text" name="date_to" id="date_to" class="form-control">
+                                <input type="date" name="date_to" id="date_to" class="form-control">
                             </div>
                         </div>
                     </div>

@@ -16,8 +16,7 @@ use VacationPortal\Helpers\UserDtoValidator;
 class UserService
 {
 
-    public function registerUser(UserDto $userDto): ResponseObject
-    {
+    public function registerUser(UserDto $userDto): ResponseObject{
         global $userRepository;
 
         $validator = new UserDtoValidator();
@@ -60,8 +59,7 @@ class UserService
         return new ResponseObject(0, "User Register Success");
     }
 
-    public function login(LoginDto $loginDto) : ResponseObject
-    {
+    public function login(LoginDto $loginDto) : ResponseObject {
         global $userRepository;
 
         $validator = new LoginDtoValidator();
